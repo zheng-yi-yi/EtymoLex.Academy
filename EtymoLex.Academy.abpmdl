@@ -1,0 +1,101 @@
+{
+  "template": "app",
+  "imports": {
+    "Volo.Abp.BasicTheme": {
+      "version": "9.1.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.Account": {
+      "version": "9.1.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.OpenIddict": {
+      "version": "9.1.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.Identity": {
+      "version": "9.1.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.TenantManagement": {
+      "version": "9.1.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.SettingManagement": {
+      "version": "9.1.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.PermissionManagement": {
+      "version": "9.1.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.FeatureManagement": {
+      "version": "9.1.0",
+      "isInstalled": true
+    }
+  },
+  "folders": {
+    "items": {
+      "src": {},
+      "test": {}
+    }
+  },
+  "packages": {
+    "EtymoLex.Academy.Application": {
+      "path": "src/EtymoLex.Academy.Application/EtymoLex.Academy.Application.abppkg",
+      "folder": "src"
+    },
+    "EtymoLex.Academy.Application.Tests": {
+      "path": "test/EtymoLex.Academy.Application.Tests/EtymoLex.Academy.Application.Tests.abppkg",
+      "folder": "test"
+    },
+    "EtymoLex.Academy.Domain.Shared": {
+      "path": "src/EtymoLex.Academy.Domain.Shared/EtymoLex.Academy.Domain.Shared.abppkg",
+      "folder": "src"
+    },
+    "EtymoLex.Academy.Application.Contracts": {
+      "path": "src/EtymoLex.Academy.Application.Contracts/EtymoLex.Academy.Application.Contracts.abppkg",
+      "folder": "src"
+    },
+    "EtymoLex.Academy.HttpApi": {
+      "path": "src/EtymoLex.Academy.HttpApi/EtymoLex.Academy.HttpApi.abppkg",
+      "folder": "src"
+    },
+    "EtymoLex.Academy.HttpApi.Client": {
+      "path": "src/EtymoLex.Academy.HttpApi.Client/EtymoLex.Academy.HttpApi.Client.abppkg",
+      "folder": "src"
+    },
+    "EtymoLex.Academy.EntityFrameworkCore.Tests": {
+      "path": "test/EtymoLex.Academy.EntityFrameworkCore.Tests/EtymoLex.Academy.EntityFrameworkCore.Tests.abppkg",
+      "folder": "test"
+    },
+    "EtymoLex.Academy.EntityFrameworkCore": {
+      "path": "src/EtymoLex.Academy.EntityFrameworkCore/EtymoLex.Academy.EntityFrameworkCore.abppkg",
+      "folder": "src"
+    },
+    "EtymoLex.Academy.TestBase": {
+      "path": "test/EtymoLex.Academy.TestBase/EtymoLex.Academy.TestBase.abppkg",
+      "folder": "test"
+    },
+    "EtymoLex.Academy.Domain.Tests": {
+      "path": "test/EtymoLex.Academy.Domain.Tests/EtymoLex.Academy.Domain.Tests.abppkg",
+      "folder": "test"
+    },
+    "EtymoLex.Academy.HttpApi.Client.ConsoleTestApp": {
+      "path": "test/EtymoLex.Academy.HttpApi.Client.ConsoleTestApp/EtymoLex.Academy.HttpApi.Client.ConsoleTestApp.abppkg",
+      "folder": "test"
+    },
+    "EtymoLex.Academy.DbMigrator": {
+      "path": "src/EtymoLex.Academy.DbMigrator/EtymoLex.Academy.DbMigrator.abppkg",
+      "folder": "src"
+    },
+    "EtymoLex.Academy.HttpApi.Host": {
+      "path": "src/EtymoLex.Academy.HttpApi.Host/EtymoLex.Academy.HttpApi.Host.abppkg",
+      "folder": "src"
+    },
+    "EtymoLex.Academy.Domain": {
+      "path": "src/EtymoLex.Academy.Domain/EtymoLex.Academy.Domain.abppkg",
+      "folder": "src"
+    }
+  }
+}
