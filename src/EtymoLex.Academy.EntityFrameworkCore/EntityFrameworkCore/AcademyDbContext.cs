@@ -58,6 +58,7 @@ public class AcademyDbContext :
 
     #endregion
     public DbSet<Morpheme> Morphemes { get; set; }
+    public DbSet<MorphemeExample> MorphemeExamples { get; set; }
 
     public AcademyDbContext(DbContextOptions<AcademyDbContext> options)
         : base(options)
@@ -95,7 +96,21 @@ public class AcademyDbContext :
         {
             b.ToTable(AcademyConsts.DbTablePrefix + "Morphemes", AcademyConsts.DbSchema);
             b.HasIndex(x => new { x.TenantId, x.Value }).IsUnique().AreNullsDistinct(false);
+
+            b.HasMany(x => x.Examples)
+             .WithOne(x => x.Parent)
+             .HasForeignKey(x => x.ParentId)
+             .IsRequired();
+
             b.ConfigureByConvention(); 
+            /* Configure more properties here */
+        });
+
+        builder.Entity<MorphemeExample>(b =>
+        {
+            b.ToTable(AcademyConsts.DbTablePrefix + "MorphemeExamples", AcademyConsts.DbSchema);
+            b.HasIndex(x => new { x.TenantId, x.Word }).IsUnique().AreNullsDistinct(false);
+            b.ConfigureByConvention();
             /* Configure more properties here */
         });
     }

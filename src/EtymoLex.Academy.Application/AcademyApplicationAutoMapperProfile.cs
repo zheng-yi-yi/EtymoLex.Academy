@@ -17,6 +17,10 @@ public class AcademyApplicationAutoMapperProfile : Profile
         CreateMap<CreateUpdateMorphemeDto, Morpheme>(MemberList.Source);
         CreateMap<Morpheme, ExportMorphemeDto>();
         CreateMap<ExportMorphemeDto, Morpheme>();
+        CreateMap<MorphemeExample, MorphemeExampleDto>();
+        CreateMap<CreateUpdateMorphemeExampleDto, MorphemeExample>(MemberList.Source);
+        CreateMap<MorphemeExample, ExportMorphemeExampleDto>();
+        CreateMap<ExportMorphemeExampleDto, MorphemeExample>();
     }
 
     public static void MapNotNullProperty(object source, object target)

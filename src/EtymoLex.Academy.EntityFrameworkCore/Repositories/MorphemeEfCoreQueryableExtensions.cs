@@ -13,6 +13,7 @@ public static class MorphemeEfCoreQueryableExtensions
         }
 
         return queryable
+            .Include(x => x.Examples)
             // .Include(x => x.xxx) // TODO: AbpHelper generated
             ;
     }
