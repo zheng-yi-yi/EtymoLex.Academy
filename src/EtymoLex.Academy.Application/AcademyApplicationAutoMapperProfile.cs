@@ -1,6 +1,8 @@
 using AutoMapper;
 using System.Reflection;
+using EtymoLex.Academy;
 using System;
+using EtymoLex.Academy.Dtos.Morpheme;
 
 namespace EtymoLex.Academy;
 
@@ -11,6 +13,10 @@ public class AcademyApplicationAutoMapperProfile : Profile
         /* You can configure your AutoMapper mapping configuration here.
          * Alternatively, you can split your mapping configurations
          * into multiple profile classes for a better organization. */
+        CreateMap<Morpheme, MorphemeDto>();
+        CreateMap<CreateUpdateMorphemeDto, Morpheme>(MemberList.Source);
+        CreateMap<Morpheme, ExportMorphemeDto>();
+        CreateMap<ExportMorphemeDto, Morpheme>();
     }
 
     public static void MapNotNullProperty(object source, object target)

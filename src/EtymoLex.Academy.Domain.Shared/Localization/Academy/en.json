@@ -1,9 +1,15 @@
 {
   "Culture": "en",
   "Texts": {
-    "AppName": "Academy",
+    "AppName": "EtymoLex",
     "Menu:Home": "Home",
     "LongWelcomeMessage": "Welcome to the application. This is a startup project based on the ABP framework. For more information visit",
-    "Welcome": "Welcome"
+    "Welcome": "Welcome",
+    "MENU_Morpheme": "Morphemes",
+    "LABEL_Morpheme": "Morpheme",
+    "LABEL_Value": "Value",
+    "LABEL_Type": "Type",
+    "LABEL_OriginLanguage": "OriginLanguage",
+    "LABEL_Meaning": "Meaning"
   }
 }

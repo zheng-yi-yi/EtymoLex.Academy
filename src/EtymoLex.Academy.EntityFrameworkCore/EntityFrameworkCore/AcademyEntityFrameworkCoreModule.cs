@@ -1,3 +1,4 @@
+using EtymoLex.Academy;
 using System;
 using Microsoft.Extensions.DependencyInjection;
 using Volo.Abp.Uow;
@@ -47,6 +48,7 @@ public class AcademyEntityFrameworkCoreModule : AbpModule
                 /* Remove "includeAllEntities: true" to create
                  * default repositories only for aggregate roots */
             options.AddDefaultRepositories(includeAllEntities: true);
+            options.AddRepository<Morpheme, MorphemeRepository>();
         });
 
         if (AbpStudioAnalyzeHelper.IsInAnalyzeMode)

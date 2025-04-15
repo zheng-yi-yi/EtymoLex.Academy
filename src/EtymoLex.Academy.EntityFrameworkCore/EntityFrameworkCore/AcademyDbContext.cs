@@ -14,6 +14,7 @@ using Volo.Abp.SettingManagement.EntityFrameworkCore;
 using Volo.Abp.OpenIddict.EntityFrameworkCore;
 using Volo.Abp.TenantManagement;
 using Volo.Abp.TenantManagement.EntityFrameworkCore;
+using EtymoLex.Academy;
 
 namespace EtymoLex.Academy.EntityFrameworkCore;
 
@@ -56,6 +57,7 @@ public class AcademyDbContext :
     public DbSet<TenantConnectionString> TenantConnectionStrings { get; set; }
 
     #endregion
+    public DbSet<Morpheme> Morphemes { get; set; }
 
     public AcademyDbContext(DbContextOptions<AcademyDbContext> options)
         : base(options)
@@ -87,5 +89,14 @@ public class AcademyDbContext :
         //    b.ConfigureByConvention(); //auto configure for the base class props
         //    //...
         //});
+
+
+        builder.Entity<Morpheme>(b =>
+        {
+            b.ToTable(AcademyConsts.DbTablePrefix + "Morphemes", AcademyConsts.DbSchema);
+            b.HasIndex(x => new { x.TenantId, x.Value }).IsUnique().AreNullsDistinct(false);
+            b.ConfigureByConvention(); 
+            /* Configure more properties here */
+        });
     }
 }
